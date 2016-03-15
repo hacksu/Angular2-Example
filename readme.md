@@ -106,4 +106,29 @@ do it too, but we'll do it using components.
 
 First create a new file in the app folder. I'll call it. `image.ts`
 
-Inside this file we need to import Component so we can use it to define our component
+Inside this file we need to import Component so we can use it to define our
+component something like this
+
+    import {Component} from 'angular2/core';
+
+    @Component(
+      {
+        selector: "image",
+        template: `<img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"/>`
+      }
+    )
+    export class Image{
+    };
+
+
+To actually use it we need to import it into our app.component so open that file.
+
+And add `import {Image} from  './image';`
+
+This still isn't quite good enough though. We need to tell the component we'll be using
+
+it so add `directives: [Image]`. Now we can use it just like a normal html tag. So add
+
+`<image></image>` somewhere in the template string.
+
+And that's that. Reload and you should see your glorious image.
