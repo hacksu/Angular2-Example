@@ -48,7 +48,7 @@ support for JavaScript and html features that IE does not natively implement.
 You may notice, though that none of our Typescript or JavaScript files are imported.
 
 This is because System.js manage this. Systems.js can get complicated fast, but here
-we just have a <script> tag which configures it and tells it to import our main.ts file.
+we just have a `<script>` tag which configures it and tells it to import our main.ts file.
 
 The only other part in the index is  `<my-app>Loading...</my-app>`. It's honestly
 the strangest part though. It doesn't really seem like it should work. <my-app>
