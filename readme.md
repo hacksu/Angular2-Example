@@ -1,1 +1,1 @@
-A project to demonstrate the basics of using angular2
+A project to demonstrate the basics of using Angular 2
