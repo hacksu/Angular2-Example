@@ -20,11 +20,16 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
+                    var _this = this;
+                    this.greeting = "Hello World!";
+                    setTimeout(function () {
+                        _this.greeting = "Good Bye World!";
+                    }, 1000);
                 }
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: '<h1>Hello World</h1>',
+                        template: '<h1>{{greeting}}</h1>',
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

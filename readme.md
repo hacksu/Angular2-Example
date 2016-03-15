@@ -63,5 +63,38 @@ and starts Angular
 ### `app.component.ts`
 
 `app.component.ts` is the core of our application. It is what Angular 2 calls a
-component. Basically it is a custom tag implemented as the combination of some HTML, the template and
+component. Basically it is a custom tag implemented as the combination of some HTML (the template) and
 a class to store it's behavior.
+
+
+## Lets change something, after a second
+
+The real power of Angular 2 is being able to mix code with our view so lets do that.
+
+Open `app/app.component.ts`
+
+Remove where it says `Hello World` and replace it with `{{greeting}}` the `{{}}`
+is a special symbol in Angular 2 and tells it that we want it to be replaced with
+the value of the `greeting` member variable. We need to add that variable. We can just add it inside the class
+like
+`export class AppComponent {
+  greeting = "Hello World!"
+}`
+
+Right now we aren't really using typescript, we can tell the compiler that greeting
+will always be string by replacing it with `greeting: string = "Hello World!"`
+
+If you haven't exited it you should just be able to reload the tab in your browser
+if not enter `npm start`. Look at it and you should see. Basically the same things
+only now you have ! at the end. Good lets change it. After a bit of time.
+
+The `setTimeout` is the classic way of doing this. It will call the function passed to it after a time specified.
+
+so
+
+` constructor() {
+    setTimeout(() => {
+      this.greeting = "Good Bye World!";
+    }, 1000);
+  }
+`
