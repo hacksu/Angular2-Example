@@ -98,3 +98,12 @@ so
     }, 1000);
   }
 `
+
+## This isn't very exciting. Lets add some pictures
+
+It seems you guys all love finding pictures when your doing Ben's talks so lets
+do it too, but we'll do it using components.
+
+First create a new file in the app folder. I'll call it. `image.ts`
+
+Inside this file we need to import Component so we can use it to define our component
